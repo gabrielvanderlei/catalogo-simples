@@ -6,6 +6,7 @@ import Landing from '../components/Landing';
 import Catalog from '../components/Catalog';
 import Footer from '../components/Footer';
 import { useContext } from 'react';
+import Call from '../components/Call';
 
 export default () => {
   let [todayOptions, setTodayOptions] = useState({});
@@ -47,16 +48,17 @@ export default () => {
       <Header {...translator.app} />
       <Landing  {...translator.landing}  />
 
-      <div class="choose">Escolha uma das opções do dia</div>
-      {translator.todayOptions.map((item) => <Catalog onSelect={handleTodayOption}  {...item}/> )}
+      <div class="col">
+        <div class="choose">Escolha uma das opções do dia</div>
+        {translator.todayOptions.map((item) => <Catalog onSelect={handleTodayOption}  {...item}/> )}
+      </div>
       
-      <div class="choose">Escolha um dos acompanhamentos</div>
-      {translator.add.map((item) => <Catalog onSelect={handleAdds} {...item}/> )}
+      <div class="col">
+        <div class="choose">Escolha um dos acompanhamentos</div>
+        {translator.add.map((item) => <Catalog onSelect={handleAdds} {...item}/> )}
+      </div>
 
-      <div class="choose">Vamos confirmar o pedido</div>
-      {Object.keys(Object.assign(todayOptions, adds)).map((key) => 
-        <Catalog name={key} price={todayOptions[key]} /> )}
-
+      <Call />
       <Footer {...translator.footer} />
     </div>
   )

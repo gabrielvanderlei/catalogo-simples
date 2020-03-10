@@ -9,14 +9,9 @@ export default ({name, price, onSelect}) => {
         return `R$ ${price}`;
     }
 
-    let handleSelect = () => {
-        onSelect({name, price, selected});
-        setSelected(!selected)
-    }
-
     return (
         <div>
-            <div className={selected ? 'catalog active' : 'catalog'} onClick={handleSelect}>
+            <div className='catalog'>
                 <div class="option">{name}</div>
                 <div class="price">{formatPrice(price)}</div>
             </div>

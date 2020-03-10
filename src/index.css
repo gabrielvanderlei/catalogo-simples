@@ -10,3 +10,8 @@ body{
   padding: 20px;
   margin-top: 80px;
 }
+
+.col{
+  margin: 20px;
+  display: inline-table;
+}

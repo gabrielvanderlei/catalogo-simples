@@ -1,29 +1,25 @@
 .catalog{
     border: 1px solid rgb(240, 240, 240);
-    display: inline-block;
-    margin: 5px;
-    width: 40%;
+    display: block;
+    margin: 15px;
     border-radius: 4px;
     cursor: pointer;
     transition: all 0.5s;
-}
-
-.catalog:hover{
-    background: rgb(240, 240, 240);
+    box-shadow: 0 0 7px rgba(0,0,0,0.15);
+    text-align: left;
 }
 
 .catalog .option{
     display: inline-block;
     padding: 20px 20px 10px;
-    width: 40%;
-    font-size: 18px;
+    font-size: 28px;
 }
 
 .catalog .price{
     font-weight: bold;
     display: inline-block;
-    width: 40%;
-    font-size: 18px;
+    float: right;
+    font-size: 22px;
     padding: 10px 20px 20px;
 }
 
